@@ -1,0 +1,183 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>XinFin Testnet</title>
+    
+    <!-- favicon -->
+    <link rel="apple-touch-icon" sizes="57x57" href="assets/images/favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="assets/images/favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="assets/images/favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="assets/images/favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="assets/images/favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="assets/images/favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="assets/images/favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="assets/images/favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="assets/images/favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="assets/images/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon/favicon-16x16.png">
+    <link rel="manifest" href="assets/images/favicon/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="assets/images/favicon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" crossorigin="anonymous">
+    <link href="assets/css/custom.min.css" rel="stylesheet">
+
+	<style>	
+    .topHeader{position:fixed;max-height:70px;z-index:999;width:100%;/*padding-top:10px;padding-bottom:10px;*/overflow-y:hidden;-webkit-transition:all .3s;transition:all .3s;background-color:#FFFFFF!important;top:0;border-bottom:1px solid #c7dbe9;box-shadow: 1px 0 20px rgba(0,0,0,.2);}
+    .open-nav{max-height:450px!important}
+    .open-nav .mobile-toggle{transform:rotate(-90deg);-webkit-transform:rotate(-90deg)}
+    .logo{width:50px;float:left;display:block;padding-top:10px;padding-bottom:10px;}
+    nav{float:right;/*padding-top:15px;padding-bottom:15px;*/}
+    nav ul{list-style:none;overflow:hidden;text-align:right;float:right;padding-left:0px;margin:0px;}
+    nav ul li{display:inline-block;/*margin-left:35px;line-height:1.5*/line-height:66px;padding-left:12px;padding-right:12px;border-top:4px solid #FFFFFF;}
+    nav ul li a{color:#888;font-size:15px;display:block;}
+	nav ul li a i{margin-right:4px;}
+    nav ul li a:hover{color:#035592;cursor:pointer;}
+    nav ul li.active{border-top: 4px solid #89b5d7;background-color:#ecf0f3;color:#035592;}
+	nav ul li.active a, nav ul li.active a i{color:#035592;}
+    .mobile-toggle{display:none;cursor:pointer;font-size:20px;position:absolute;right:10px;/*top:10px;*/top:25px;width:30px;-webkit-transition:all .2s ease-in;-moz-transition:all .2s ease-in;transition:all .2s ease-in}
+    .mobile-toggle span{width:30px;height:4px;margin-bottom:6px;border-radius:1000px;background:#7996ab;display:block}
+    .mouse{display:block;margin:0 auto 0 -26px;width:26px;height:46px;border-radius:13px;border:2px solid #e8f380;bottom:40px;position:absolute;left:50%}
+    .mouse span{display:block;margin:6px auto;width:2px;height:2px;border-radius:4px;background:#e8f380;border:1px solid transparent;-webkit-animation-duration:1s;animation-duration:1s;-webkit-animation-fill-mode:both;animation-fill-mode:both;-webkit-animation-iteration-count:infinite;animation-iteration-count:infinite;-webkit-animation-name:scroll;animation-name:scroll}
+    @-webkit-keyframes scroll{0%{opacity:1;-webkit-transform:translateY(0);transform:translateY(0)}
+    100%{opacity:0;-webkit-transform:translateY(20px);transform:translateY(20px)}}
+    @keyframes scroll{0%{opacity:1;-webkit-transform:translateY(0);-ms-transform:translateY(0);transform:translateY(0)}
+    100%{opacity:0;-webkit-transform:translateY(20px);-ms-transform:translateY(20px);transform:translateY(20px)}}
+	
+	.iframe-container{margin-top:70px;}	
+	.loadIframe {position: relative;padding-bottom: 65.25%;/*padding-top: 30px;*/padding-top: 100px;height: 0;overflow: auto;-webkit-overflow-scrolling:touch;} 
+	.loadIframe iframe {position: absolute;top: 0;left: 0;width: 100%;height: 100%;}
+	
+    @media only screen and (max-width:766px){.topHeader{/*padding-top:15px*/}.logo{float:left;padding-top:10px;padding-bottom:10px;}.mobile-toggle{display:block}nav{width:100%}nav ul{/*padding-top:10px;margin-bottom:22px;*/float:left;text-align:center;width:100%}nav ul li{width:100%;padding:7px 0;margin:0;line-height:40px;}.loadIframe{padding-top:30px;padding-bottom:165.25%;} 
+    </style>
+
+</head>
+
+<body class="nav-sm" style="overflow-x: hidden">
+
+    <header class="topHeader" id="topHeader-menu">
+        <div class="container-fluid">
+            <div class="row align-self-center">
+                <div class="col-lg-12">
+                    <a href="https://xinfin.org/"><img src="assets/images/xinfin-logo.png" class="logo img-fluid"></a>
+                    <div class="mobile-toggle"> <span></span> <span></span> <span></span> </div>
+                    <nav>
+                        <ul class="top-menu">
+                            <li id="stats_menu"><a onclick="load('#stats')"><i class="fa fa-tachometer-alt"></i> Network Stats</a></li>
+                            <li id="explorer_menu"><a onclick="load('#explorer')"><i class="fa fa-database"></i> Block Explorer</a></li>
+                            <li id="getTestXDC_menu"><a onclick="load('#getTestXDC')"><i class="fa fa-download"></i> Get Test XDC</a></li>
+                            <li id="webWallet_menu"><a onclick="load('#webWallet')"><i class="fa fa-wallet"></i> Web Wallet</a></li>
+                            <li id="androidWallet_menu"><a onclick="load('#androidWallet')"><i class="fab fa-android"></i> Android Wallet</a></li>
+                            <li id="switchLivenet_menu"><a><i class="fa fa-toggle-on"></i> Switch to Livenet</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- end topHeader -->
+
+    <div class="container body iframe-container">
+        <div class="main_container">
+
+            <div class="iframe_col" role="main" style="padding: 0 !important">
+
+                <!-- new code -->
+                <div class="loadIframe"> 
+   					<iframe id="frame" style="position: absolute; width: 100%; height: 100%; border: none;" onload="if ($(this).attr('src') != '') { resize(); $('#frame-wrapper').fadeIn(300); }"></iframe>
+				</div>
+                <!-- new code-->
+
+                
+                <!--<div id="frame-wrapper" hidden style="position: absolute; height: 100%;">
+                    <iframe id="frame" style="position: absolute; width: 1920px; height: 100%; border: none;" onload="if ($(this).attr('src') != '') { resize(); $('#frame-wrapper').fadeIn(300); }"></iframe>
+                </div>-->
+            </div>
+        </div>
+    </div>
+
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/custom.min.js"></script>
+    <script>
+        var load = function(hash) {
+            window.location.hash = hash;
+
+            var url = hash;
+            switch (hash) {
+                case "#stats":
+                    url = "http://stats.testnet.xinfin.network:3000";
+                    break;
+                case "#explorer":
+                    url = "http://xinfin.info";
+                    break;
+                case "#getTestXDC":
+                    url = "https://faucet_testnet.xinfin.network";
+                    break;
+                case "#webWallet":
+                    url = "http://wallet.testnet.xinfin.network";
+                    break;
+				case "#androidWallet":
+                    url = "http://xinfin.network/xdc-wallet.apk";
+                    break;
+            }
+            setTimeout(function() {
+                if (url.substring(0, 1) == "#") {
+                    $('.body').css({
+                        overflowY: 'auto'
+                    });
+                    $("#frame").attr("src", "");
+                    $(url).fadeIn(300);
+                } else {
+                    $('.body').css({
+                        overflowY: 'hidden'
+                    });
+                    $("#frame").attr("src", url);
+                }
+            }, 300);
+        }
+        var resize = function() {
+            var sidebar = $($(".navbar")[0]).width();
+            //var limit   = document.body.clientWidth - sidebar;
+            var limit = document.body.clientWidth;
+            var scale = limit / 1920;
+
+            $("#frame-wrapper").width(limit);
+            $("#frame-wrapper").height(document.body.clientHeight / scale);
+            $("#frame-wrapper").css({
+                transform: 'scale(' + (scale) + ')',
+                transformOrigin: "0 0"
+            });
+        };
+        $(window).resize(resize);
+
+        if (window.location.hash == "") {
+            var item = $(".top-menu").children()[0];
+            $(item).children()[0].click();
+            $(item).addClass("active");
+        } else {
+            load(window.location.hash);
+            var menu = $(window.location.hash + "_menu");
+            if (menu !== undefined) {
+                $(menu).addClass("active");
+            }
+        }
+    </script>
+
+</body>
+
+</html>
