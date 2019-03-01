@@ -15,5 +15,5 @@ html {
 }
 .loadIframe {
     padding-bottom: 0 !important;
-    padding-top: 89vh !important;
+    padding-top: calc(100vh - 70px) !important;
 }
