@@ -1,9 +1,6 @@
 
 <!DOCTYPE html>
 <html lang="en">
-
-<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
-
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
@@ -36,8 +33,9 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" crossorigin="anonymous">
     <link href="assets/css/custom.min.css" rel="stylesheet">
     <link href="assets/css/header.css" rel="stylesheet">
-
+    <link href="assets/css/psd.css" rel="stylesheet">
 </head>
+
 
 <body class="nav-sm" style="overflow-x: hidden">
 	
@@ -71,95 +69,55 @@
     <!-- end topHeader -->
 
     <div class="container body iframe-container">
-        <div class="main_container">
-
-            <div class="iframe_col" role="main" style="padding: 0 !important">
-
-                <!-- new code -->
-                <div class="loadIframe"> 
-   					<iframe id="frame" style="position: absolute; width: 100%; height: 100%; border: none;" onload="if ($(this).attr('src') != '') { resize(); $('#frame-wrapper').fadeIn(300); }"></iframe>
-				</div>
-                <!-- new code-->
-
-                
-                <!--<div id="frame-wrapper" hidden style="position: absolute; height: 100%;">
-                    <iframe id="frame" style="position: absolute; width: 1920px; height: 100%; border: none;" onload="if ($(this).attr('src') != '') { resize(); $('#frame-wrapper').fadeIn(300); }"></iframe>
-                </div>-->
+        <div class="main_container row header">
+            <div class="col-md-2 headerLogo">
+                <img src="assets/images/psd/home.png" />
             </div>
+            <div class="col-md-5 headerSearch">
+                <form class="search-form">
+                    <input type="search" value="" placeholder="Search Node" class="search-input">
+                    <button type="submit" class="search-button">
+                        <img src="assets/images/psd/search.jpg">
+                    </button>
+                </form>
+            </div>
+            <div class="col-md-5 headerMasterWrap">
+                <button class="headerMasterBtn" type="button">Setup Masternode</button>
+                <button class="headerMasterBtn loginBtn" type="button">Login</button>
+            </div>
+        </div>
+
+        <div class="networkStatus">
+            <h3 class="rowTitle">Network Status</h3>
+            <ul class="statusCards row" id="statusCards">
+            </ul>
+        </div>
+
+        <div class="transactionsSection">
+            <ul class="transactionsHeader">
+                <li class="transactionCluster active">Masternodes <span>(6)</span></li>
+                <li class="transactionCluster">Slashed Mins <span>(2)</span></li>
+                <li class="transactionCluster">Resigned Nodes <span>(2)</span></li>
+            </ul>
+
+
+            <table id="transactions">
+                <tr>
+                  <th>Address</th>
+                  <th>Name</th>
+                  <th>Capacity</th>
+                  <th>Latest Signed Block</th>
+                  <th>Status</th>
+                  <th></th>
+                </tr>
+              </table>
         </div>
     </div>
 
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/js/bootstrap.min.js"></script>
     <script src="assets/js/custom.min.js"></script>
-    <script>
-        var load = function(hash) {
-            window.location.hash = hash;
-
-            var url = hash;
-            switch (hash) {
-                case "#stats":
-                    url = "http://stats.testnet.xinfin.network:3000";
-                    break;
-                case "#masternode":
-                    url = "https://mn_testnet.xinfin.network";
-                    break;
-                case "#explorer":
-                    url = "https://explorer_testnet.xinfin.network";
-                    break;
-                case "#getTestXDC":
-                    url = "https://faucet_testnet.xinfin.network";
-                    break;
-                case "#webWallet":
-                    url = "https://walletcore_testnet.xinfin.network";
-                    break;
-				case "#androidWallet":
-                    url = "https://play.google.com/store/apps/details?id=com.xdcwallet";
-                    break;
-            }
-            setTimeout(function() {
-                if (url.substring(0, 1) == "#") {
-                    $('.body').css({
-                        overflowY: 'auto'
-                    });
-                    $("#frame").attr("src", "");
-                    $(url).fadeIn(300);
-                } else {
-                    $('.body').css({
-                        overflowY: 'hidden'
-                    });
-                    $("#frame").attr("src", url);
-                }
-            }, 300);
-        }
-        var resize = function() {
-            var sidebar = $($(".navbar")[0]).width();
-            //var limit   = document.body.clientWidth - sidebar;
-            var limit = document.body.clientWidth;
-            var scale = limit / 1920;
-
-            $("#frame-wrapper").width(limit);
-            $("#frame-wrapper").height(document.body.clientHeight / scale);
-            $("#frame-wrapper").css({
-                transform: 'scale(' + (scale) + ')',
-                transformOrigin: "0 0"
-            });
-        };
-        $(window).resize(resize);
-
-        if (window.location.hash == "") {
-            var item = $(".top-menu").children()[0];
-            $(item).children()[0].click();
-            $(item).addClass("active");
-        } else {
-            load(window.location.hash);
-            var menu = $(window.location.hash + "_menu");
-            if (menu !== undefined) {
-                $(menu).addClass("active");
-            }
-        }
-    </script>
-
+    <script src="assets/js/psd.js"></script>
 </body>
 
 </html>
