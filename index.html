@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -51,7 +50,7 @@
     nav{float:right;/*padding-top:15px;padding-bottom:15px;*/}
     nav ul{list-style:none;overflow:hidden;text-align:right;float:right;padding-left:0px;margin:0px;}
     nav ul li{display:inline-block;/*margin-left:35px;line-height:1.5*/line-height:66px;padding-left:10px;padding-right:10px;border-top:4px solid #FFFFFF;}
-    nav ul li a{color:#888;font-size:14px;display:block;}
+    nav ul li a{font-family: "Source Sans Pro",sans-serif;color:#888;font-size:14px;display:block;}
 	nav ul li a i{margin-right:2px;}
     nav ul li a:hover{color:#035592;cursor:pointer;}
     nav ul li.active{border-top: 4px solid #89b5d7;background-color:#ecf0f3;color:#035592;}
@@ -105,12 +104,13 @@
                     <div class="mobile-toggle"> <span></span> <span class="middle-bar"></span> <span></span> </div>
                     <nav>
                         <ul class="top-menu">
-                            <li id="androidWallet_menu"><a onclick="load('#stats')"><i class="fa fa-tachometer-alt"></i> Network Stats</a></li>
-                            <li id="webWallet_menu"><a onclick="load('#webWallet')"><i class="fa fa-wallet"></i> Web Wallet</a></li>
-		    			    <li id="masternode_menu"><a onclick="load('#masternode')"><i class="fa fa-link"></i> Masternode</a></li>                            
-                            <li id="explorer_menu"><a onclick="load('#explorer')"><i class="fa fa-database"></i> Block Explorer</a></li>
+                            <li id="androidWallet_menu"><a onClick="load('#stats')"><i class="fa fa-tachometer-alt"></i> Network Stats</a></li>
+                            <li id="webWallet_menu"><a onClick="load('#webWallet')"><i class="fa fa-wallet"></i> Web Wallet</a></li>
+		    			    <li id="masternode_menu"><a onClick="load('#masternode')"><i class="fa fa-link"></i> Masternode</a></li>                            
+                            <li id="explorer_menu"><a onClick="load('#explorer')"><i class="fa fa-database"></i> Block Explorer</a></li>
                             <li id="androidWallet_menu"><a href="https://play.google.com/store/apps/details?id=com.xdcwallet" target="_blank"><i class="fab fa-android"></i> Android Wallet</a></li>
-                            <li id="androidWallet_menu"><a href="https://xinfin.org/setup-masternode.php" target="_blank"><i class="fa fa-download"></i> One Click Installer</a></li>
+                            <li id="xinPay_menu"><a href="https://chrome.google.com/webstore/detail/xinpay/bocpokimicclpaiekenaeelehdjllofo?hl=en" target="_blank"><i class="fa fa-wallet"></i> XinPay</a></li>
+							<li id="oneClickInstaller_menu"><a href="https://xinfin.org/setup-masternode.php" target="_blank"><i class="fa fa-download"></i> One Click Installer</a></li>
                             <li id="switchLivenet_menu"><a href="http://apothem.network"><i class="fa fa-toggle-on"></i> Switch to Apothem</a></li>
                         </ul>
                     </nav>
