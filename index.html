@@ -81,15 +81,15 @@
 
                 <ul class="nav navbar-nav navbar-right">
                     <li id="stats_menu"><a onClick="load('#stats')"><i class="fa fa-tachometer-alt"></i> Network Stats</a></li>
-                    <li id="webWallet_menu"><a onClick="load('#webWallet')"><i class="fa fa-wallet"></i> Web Wallet</a></li>
+                    <li id="explorer_menu"><a href="https://explorer.xinfin.network" target="_blank"><i class="fa fa-database"></i> Block Explorer</a></li>
                     <li id="masternode_menu"><a onClick="load('#masternode')"><i class="fa fa-link"></i> Masternode</a></li>
-                    <li id="explorer_menu"><a onClick="load('#explorer')"><i class="fa fa-database"></i> Block Explorer</a></li>
-                    <li id="getTestXDC_menu"><a onclick="load('#getTestXDC')"><i class="fa fa-download"></i> Get Test XDC</a></li>
+                    <li id="webWallet_menu"><a href="https://wallet.xinfin.network/" target="_blank"><i class="fa fa-wallet"></i> Web Wallet</a></li>
+                    <li id="xinPay_menu"><a href="https://chrome.google.com/webstore/detail/xinpay/bocpokimicclpaiekenaeelehdjllofo?hl=en" target="_blank"><i class="fa fa-wallet"></i> XinPay</a></li>
+
                     <li id="androidWallet_menu"><a href="https://play.google.com/store/apps/details?id=com.xdcwallet" target="_blank"><i class="fab fa-android"></i> Android Wallet</a></li>
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">More <b class="caret"></b></a>
                         <ul class="dropdown-menu">
-                            <li id="xinPay_menu"><a href="https://chrome.google.com/webstore/detail/xinpay/bocpokimicclpaiekenaeelehdjllofo?hl=en" target="_blank"><i class="fa fa-wallet"></i> XinPay</a></li>
                             <li id="oneClickInstaller_menu"><a href="https://xinfin.org/setup-masternode.php" target="_blank"><i class="fa fa-download"></i> One Click Installer</a></li>
                             <li><a href="https://howto.xinfin.org/" target="_blank"><i class="fa fa-file"></i>XinFin-Docs</a></li>
                             <li><a href="https://apidocs.xinfin.network/docs/#xinfin-apis" target="_blank"><i class="fa fa-cog"></i>XinFin-API</a></li>
@@ -97,7 +97,7 @@
                         </ul>
                     </li>
                     
-                    <li id="switchLivenet_menu"><a href="http://apothem.network"><i class="fa fa-toggle-on"></i> Switch to Apothem</a></li>
+                    <li id="switchLivenet_menu"><a href="https://www.apothem.network"><i class="fa fa-toggle-on"></i> Switch to Apothem</a></li>
                    
                 </ul>
             </div>
@@ -139,16 +139,16 @@
                     url = "https://stats1.apothem.network";
                     break;
                 case "#masternode":
-                    url = "https://master.apothem.network";
+                    url = "https://mn.xinfin.network";
                     break;
                 case "#explorer":
-                    url = "https://explorer.apothem.network";
+                    url = "https://explorer.xinfin.network";
                     break;
                 case "#getTestXDC":
                     url = "https://faucet.apothem.network";
                     break;
                 case "#webWallet":
-                    url = "https://wallet.apothem.network";
+                    url = "https://wallet.xinfin.network";
                     break;
 				case "#androidWallet":
                     url = "https://play.google.com/store/apps/details?id=com.xdcwallet";
